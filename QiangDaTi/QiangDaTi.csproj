@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AppRes\bkimg.jpg" />
+    <None Remove="AppRes\Setting.png" />
+    <None Remove="AppRes\WinClose.png" />
+    <None Remove="AppRes\WinMax.png" />
+    <None Remove="AppRes\WinMin.png" />
+    <None Remove="AppRes\WinNomral.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AppRes\bkimg.jpg" />
+    <Resource Include="AppRes\Setting.png" />
+    <Resource Include="AppRes\WinNomral.png" />
+    <Resource Include="AppRes\WinClose.png" />
+    <Resource Include="AppRes\WinMax.png" />
+    <Resource Include="AppRes\WinMin.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Questions.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Questions.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
